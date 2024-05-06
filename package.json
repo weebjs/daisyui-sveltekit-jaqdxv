@@ -14,5 +14,8 @@
     "svelte": "^4",
     "tailwindcss": "^3",
     "vite": "^4"
+  },
+  "dependencies": {
+    "svelte-turnstile": "^0.5.0"
   }
 }
