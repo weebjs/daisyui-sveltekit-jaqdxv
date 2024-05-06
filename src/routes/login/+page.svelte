@@ -1,6 +1,8 @@
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | RattleRoar</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 </head>
 
 <script>
@@ -15,34 +17,45 @@
 </script>
 
 <body>
-    <div class="hero min-h-screen bg-base-200">
-        <div class="hero-content">
-            <h1 class="text-4xl font-bold">
-                Login
-            </h1>
-            <p class="text-lg text-gray-500 mt-2 create-account" style="margin-top: -20px;">
-                Don't have an account? <a class="link underline" href="/register">Register</a>
-            </p>
-            <div class="input-group">
-                <label class="input input-bordered flex items-center">
-                    <img src="images/email.svg" alt="fontawesome-icon" class="w-4 h-4 opacity-70" />
-                    <input type="text" class="grow" placeholder="Email" />
+    <div class="flex justify-center items-center h-screen">
+        <div class="flex flex-col gap-4 rounded-box bg-base-100 p-6 max-w-md mt-[0rem]">
+            <h1 class="text-3xl font-bold self-center">Log in</h1>
+            
+            <span class="self-center">
+                Don't have an account?
+                <a class="link underline" href="/register">Register</a>
+            </span>
+            
+            <label class="form-control">
+                <div class="label">
+                    <span class="label-text">Email</span>
+                </div>
+            
+                <input class="input input-bordered" />
+            </label>
+            
+            <label class="form-control">
+                <div class="label">
+                    <span class="label-text">Password</span>
+                    <a class="label-text link underline" href="/reset">Forgot password?</a>
+                </div>
+            
+                <input type="password" class="input input-bordered" />
+            </label>
+            
+            <div class="form-control">
+                <label class="cursor-pointer label self-start gap-2">
+                    <input type="checkbox" class="checkbox" />
+                    <span class="label-text">Remember me</span>
                 </label>
-                <label class="input input-bordered flex items-center second-label">
-                    <img src="images/password.svg" alt="fontawesome-icon" class="w-4 h-4 opacity-70" />
-                    <input type="password" class="grow" placeholder="Password" />
-                </label>
-                <p class="text-sm text-gray-500 mt-1" style="margin-top: -10px;">
-                    <a class="underline" href="/reset">Forgot your password?</a>
-                </p>
-                <Turnstile siteKey="0x4AAAAAAAVhwQ_4KwtEYmQ4" on:turnstile-callback={setToken} />
-                <button class="btn btn-neutral text-2x bg-orange" style="color: white;">
-                    Log In <ion-icon name="log-in-outline"></ion-icon>
-                </button>
             </div>
+            
+            
+            <button class="btn bg-orange">Log in
+                <ion-icon name="log-in-outline"></ion-icon>
+            </button>
         </div>
     </div>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
